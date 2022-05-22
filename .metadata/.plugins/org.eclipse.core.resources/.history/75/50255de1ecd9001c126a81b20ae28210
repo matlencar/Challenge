@@ -1,0 +1,27 @@
+package br.com.fiap.empresa.model;
+
+public class Vaga extends Cargo {
+
+	private String requisitos;
+
+	// Construtor que utilizando também herança da classe cargo
+	public Vaga(String nome, String funcao, String requisitos, String comportamental, String pessoal,
+			String profissional) {
+		super(nome, funcao, requisitos, comportamental, pessoal, profissional);
+		this.requisitos = requisitos;
+	}
+	
+	// Construtor que utilizando também herança da classe cargo
+		public Vaga() {	
+		}
+
+	// Getters and Setters
+	public String getRequisitos() {
+		return requisitos;
+	}
+
+	public void setRequisitos(String requisitos) {
+		this.requisitos = requisitos;
+	}
+
+}

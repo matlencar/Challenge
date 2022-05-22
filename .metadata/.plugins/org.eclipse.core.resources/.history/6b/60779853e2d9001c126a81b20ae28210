@@ -1,0 +1,75 @@
+package br.com.fiap.empresa.view;
+
+
+import java.util.Scanner;
+
+import br.com.fiap.empresa.model.Cargo;
+import br.com.fiap.empresa.model.Empresa;
+import br.com.fiap.empresa.model.Endereco;
+import br.com.fiap.empresa.model.PropostaEmpresa;
+import br.com.fiap.empresa.model.Telefone;
+import br.com.fiap.empresa.model.Vaga;
+
+public class PlataformaCadastroEmpresa {
+
+	public static void main(String[] args) {
+		
+		//Instanciando leitor
+		Scanner leitor = new Scanner(System.in);
+		
+		//Instanciando empresa
+		Empresa empresa = new Empresa();
+		
+		//Intanciando Telefone
+		Telefone telefone = new Telefone();
+		
+		//Instanciando endereço
+		Endereco endereco = new Endereco();
+		
+		//Instanciando a proposta da empresa
+		PropostaEmpresa proposta = new PropostaEmpresa();
+		
+		//Intanciando o cargo
+		Cargo cargo = new Cargo();
+		
+		//Instanciando a vaga
+		Vaga vaga = new Vaga();
+		
+		//Lendo as informações da empresa
+		System.out.println("Digite o nome da empresa: ");
+		String nome = leitor.nextLine();
+		empresa.setNome(nome);
+		
+		System.out.println("Digite o nome fantasia da empresa: ");
+		String nomeFantasia = leitor.nextLine();
+		empresa.setNomeFantasia(nomeFantasia);
+		
+		System.out.println("Insira o CNPJ da sua empresa: ");
+		long cnpj = leitor.nextLong();
+		empresa.setCnpj(cnpj);
+		
+		System.out.println("Digite o dia da criação da empresa: ");
+		int criacaoDia = leitor.nextInt();
+		empresa.setCricaoDia(criacaoDia);
+		
+		System.out.println("Agora coloque o mes da criação da empresa: ");
+		int criacaoMes = leitor.nextInt();
+		empresa.setCricaoMes(criacaoMes);
+		
+		System.out.println("Por fim insira o ano da criação da empresa: ");
+		int cricaoAno = leitor.nextInt();
+		empresa.setCricaoAno(cricaoAno);
+		
+		//Lendo as informações de contato da empresa
+		System.out.println("Digite o numero de telefone empresarial da empresa: ");
+		int empresarial = leitor.nextInt();
+		telefone.setEmpresarial(empresarial);
+		
+		System.out.println("Digite o numero de telefone celular profissional da empresa: ");
+		int celular = leitor.nextInt();
+		telefone.setCelular(celular);
+		
+		
+	}
+
+}

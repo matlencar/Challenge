@@ -1,0 +1,29 @@
+package br.com.fiap.empresa.model;
+
+public class Empresa {
+	
+	//Atributos
+	private String nome;
+	private String nomeFantasia;
+	private long cnpj;
+	private long cricao;
+	
+	//Getters and Setters
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getNomeFantasia() {
+		return nomeFantasia;
+	}
+	
+	public void setNomeFantasia(String nomeFantasia) {
+		this.nomeFantasia = nomeFantasia;
+	}
+	
+	
+}

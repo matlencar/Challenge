@@ -1,0 +1,10 @@
+package br.com.fiap.estagiario.model;
+
+public class PerfilPessoal {
+	
+	private String sobre;
+	private String objetivo;
+	private String competencia;
+	
+	
+}

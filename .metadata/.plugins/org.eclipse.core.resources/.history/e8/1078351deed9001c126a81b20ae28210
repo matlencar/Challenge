@@ -1,0 +1,69 @@
+package br.com.fiap.empresa.model;
+
+public class Cargo {
+
+	// Atributos
+	private String nome;
+	private String funcao;
+	private String comportamental;
+	private String pessoal;
+	private String profissional;
+
+	// Construtores
+	public Cargo(String nome, String funcao, String comportamental, String pessoal, String profissional) {
+		this.nome = nome;
+		this.funcao = funcao;
+		this.comportamental = comportamental;
+		this.pessoal = pessoal;
+		this.profissional = profissional;
+	}
+	
+	//Construtor vazio de cargo
+	public Cargo() {
+	}
+
+
+
+	// Getters and Setters
+	public String getNome() {
+		return nome;
+	}
+
+	public String getComportamental() {
+		return comportamental;
+	}
+
+	public void setComportamental(String comportamental) {
+		this.comportamental = comportamental;
+	}
+	
+	public String getPessoal() {
+		return pessoal;
+	}
+
+	public void setPessoal(String pessoal) {
+		this.pessoal = pessoal;
+	}
+
+	public String getProfissional() {
+		return profissional;
+	}
+
+	public void setProfissional(String profissional) {
+		this.profissional = profissional;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getFuncao() {
+		return funcao;
+	}
+
+	public void setFuncao(String funcao) {
+		this.funcao = funcao;
+	}
+
+	
+}

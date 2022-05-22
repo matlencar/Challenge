@@ -1,0 +1,148 @@
+package br.com.fiap.empresa.view;
+
+
+import java.util.Scanner;
+
+import br.com.fiap.empresa.model.Cargo;
+import br.com.fiap.empresa.model.Empresa;
+import br.com.fiap.empresa.model.Endereco;
+import br.com.fiap.empresa.model.PropostaEmpresa;
+import br.com.fiap.empresa.model.Telefone;
+import br.com.fiap.empresa.model.Vaga;
+
+public class PlataformaCadastroEmpresa {
+
+	public static void main(String[] args) {
+		
+		//Instanciando leitor
+		Scanner leitor = new Scanner(System.in);
+		
+		//Instanciando empresa
+		Empresa empresa = new Empresa();
+		
+		//Intanciando Telefone
+		Telefone telefone = new Telefone();
+		
+		//Instanciando endereço
+		Endereco endereco = new Endereco();
+		
+		//Instanciando a proposta da empresa
+		PropostaEmpresa proposta = new PropostaEmpresa(1500.00, " Sulamerica"," CLT", 2, " Vale Alimentação,"
+				+ "Vale refeição, Day off, Curso de ingles, plano de carreira.");
+		
+		//Intanciando o cargo
+		Cargo cargo = new Cargo("O estagiario vai auxiliar na manutenção de softwares"
+				+ ", e no suporte de criação de landing pages.");
+		
+		//Instanciando a vaga
+		Vaga vaga = new Vaga("Não é necessario experiencia para a vaga, apenas bons conhecimemntos em logica,"
+				+ "Basico de HTML e CSS, se tiver conhecimento em Java e React será um diferencial.");
+		
+		//Lendo as informações da empresa
+		System.out.println("Digite o nome da empresa: ");
+		String nome = leitor.nextLine();
+		empresa.setNome(nome);
+		
+		System.out.println("Digite o nome fantasia da empresa: ");
+		String nomeFantasia = leitor.nextLine();
+		empresa.setNomeFantasia(nomeFantasia);
+		
+		//Lendo informações do endereço da empresa
+		System.out.println("Insira a rua localizada: ");
+		String rua = leitor.nextLine();
+		endereco.setRua(rua);
+				
+		System.out.println("Informe o bairro em que a empresa se localiza: ");
+		String bairro = leitor.nextLine();
+		endereco.setBairro(bairro);
+				
+		System.out.println("Digite a cidade em que a empresa se localiza: ");
+		String cidade = leitor.nextLine();
+		endereco.setCidade(cidade);
+				
+		System.out.println("Digite o municipio a onde se localiza a empresa: ");
+		String municipio = leitor.nextLine();
+		endereco.setMunicipio(municipio);
+				
+		System.out.println("Digite o estado em que a empresa se localiza: ");
+		String estado = leitor.nextLine();
+		endereco.setEstado(estado);
+		
+		System.out.println("Insira o CNPJ da sua empresa: ");
+		long cnpj = leitor.nextLong();
+		empresa.setCnpj(cnpj);
+		
+		System.out.println("Digite o dia da criação da empresa: ");
+		int criacaoDia = leitor.nextInt();
+		empresa.setCricaoDia(criacaoDia);
+		
+		System.out.println("Agora coloque o mes da criação da empresa: ");
+		int criacaoMes = leitor.nextInt();
+		empresa.setCricaoMes(criacaoMes);
+		
+		System.out.println("Por fim insira o ano da criação da empresa: ");
+		int cricaoAno = leitor.nextInt();
+		empresa.setCricaoAno(cricaoAno);
+		
+		//Lendo as informações de contato da empresa
+		System.out.println("Digite o numero de telefone empresarial da empresa: ");
+		int empresarial = leitor.nextInt();
+		telefone.setEmpresarial(empresarial);
+		
+		System.out.println("Digite o numero de telefone celular profissional da empresa: ");
+		int celular = leitor.nextInt();
+		telefone.setCelular(celular);
+		
+		
+		//Lendo informações sobre o cargo
+		System.out.println("Nome do cargo oferecido: ");
+		String nomeDoCargo = leitor.nextLine();
+		cargo.setNomeDoCargo(nomeDoCargo);
+		
+		
+		System.out.println("Qual perfil comportamental minha empresa vai precisar: ");
+		String comportamental = leitor.next();
+		cargo.setComportamental(comportamental);
+		
+		System.out.println("Qual perfil pessoal minha empresa vai precisar: ");
+		String pessoal = leitor.next();
+		cargo.setPessoal(pessoal);
+		
+		System.out.println("Qual perfil profissional minha empresa vai precisar: ");
+		String profissional = leitor.next();
+		cargo.setProfissional(profissional);
+		
+		//Exibindo as informações da empresa cadastrada na plataforma
+		
+		System.out.println();
+		System.out.println("\t\t\t\tFormulario de cadastro da plataforma");
+		System.out.println();
+
+		System.out.println("Nome da empresa: " + empresa.getNome());
+		System.out.println("Nome fantasia da empresa: " + empresa.getNomeFantasia());
+		System.out.println("Numero do CNPJ da empresa: " + empresa.getCnpj());
+		System.out.println("Telefone empresarial da empresa para contato: " + telefone.getEmpresarial());
+		System.out.println("Telefone celular profissional da empresa para contato: " + telefone.getCelular());
+		System.out.println("Data da criação da empresa: " + 
+		empresa.getCricaoDia()+ "/"+ empresa.getCricaoMes()+"/"+empresa.getCricaoAno());
+		System.out.println("Rua em que se localiza a empresa: "+endereco.getRua());
+		System.out.println("Bairro em que se localiza a empresa: "+endereco.getBairro());
+		System.out.println("Cidade em que se localiza a empresa: "+endereco.getCidade());
+		System.out.println("Municipio em que se localiza a empresa: "+endereco.getMunicipio());
+		System.out.println("Estado em que se localiza a empresa: "+endereco.getEstado());
+		System.out.println("Cargo que está sendo oferecido"+cargo.getNomeDoCargo());
+		System.out.println("O que vai excercer na sua função: "+cargo.getFuncao());
+		System.out.println("Minha empresa precisa de um estagiario que tenha o comportamtal: "+cargo.getComportamental());
+		System.out.println("Minha empresa precisa de um estagiario que tenha o Pessoal: "+cargo.getPessoal());
+		System.out.println("Minha empresa precisa de um estagiario que tenha o Profissional: "+cargo.getProfissional());
+		System.out.println("A proposta salarial que oferecemos para ao estagiario: "+proposta.getSalario());
+		System.out.println("O convenio oferecido para ao estagiario: "+proposta.getConvenio());
+		System.out.println("Tipo de contratação para o estagiario"+proposta.getContratacao());
+		System.out.println("Tempo de contratação oferecido de no maximo: "+proposta.getTempo()+" anos.");
+		System.out.println("Os demais beneficos que oferecemos na bolsa são: "+proposta.getBeneficios());
+		System.out.println("Os requisitos para a vaga em questão: "+vaga.getRequisitos());
+		
+		leitor.close();
+	}
+
+}

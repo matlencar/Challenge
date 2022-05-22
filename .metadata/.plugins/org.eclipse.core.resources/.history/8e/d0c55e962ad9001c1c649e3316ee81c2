@@ -1,0 +1,18 @@
+package br.com.fiap.empresa.model;
+
+public class Vaga extends Cargo {
+	
+	private String requisitos;
+
+	
+	//Getters and Setters
+	public String getRequisitos() {
+		return requisitos;
+	}
+
+	public void setRequisitos(String requisitos) {
+		this.requisitos = requisitos;
+	}
+	
+	
+}
